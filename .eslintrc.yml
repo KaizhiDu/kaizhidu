@@ -1,0 +1,164 @@
+---
+parser: babel-eslint
+extends:
+  - eslint:recommended
+  - plugin:import/errors
+  - plugin:react/recommended
+env:
+  es6: true
+  node: true
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+    classes: true
+rules:
+  arrow-spacing: error
+  array-callback-return: error #https://github.com/airbnb/javascript#arrays--callback-return
+  arrow-parens:
+    - error
+    - as-needed
+  arrow-body-style:
+    - error
+    - as-needed
+  brace-style: error
+  comma-dangle:
+    - error
+    - never
+  comma-style:
+    - error
+    - last
+  comma-spacing:
+    - error
+    - before: false
+      after: true
+  consistent-return: error
+  curly: error
+  dot-notation: error #https://github.com/airbnb/javascript#properties--dot
+  eqeqeq: error #https://github.com/airbnb/javascript#comparison--eqeqeq
+  eol-last:
+    - error
+    - always
+  id-length: #https://github.com/airbnb/javascript#naming--descriptive
+    - error
+    - min: 2
+  indent:
+    - error
+    - 2
+  keyword-spacing: error
+  key-spacing:
+    - error
+    - beforeColon: false
+      afterColon: true
+  max-len:
+    - error
+    - 120
+  max-lines:
+    - error
+    - 200
+  no-await-in-loop: error
+  newline-per-chained-call: error
+  no-confusing-arrow: #https://github.com/airbnb/javascript#arrows--confusing
+    - error
+    - allowParens: true
+  no-console: warn
+  no-else-return: error
+  no-delete-var: error
+  no-dupe-class-members: error
+  no-duplicate-imports: error #https://github.com/airbnb/javascript#modules--no-duplicate-imports
+  no-iterator: error #https://github.com/airbnb/javascript#iterators--nope
+  no-lone-blocks: error
+  no-nested-ternary: error #https://github.com/airbnb/javascript#comparison--nested-ternaries
+  no-return-await: error
+  no-restricted-syntax: #https://github.com/airbnb/javascript#iterators--nope
+    - error
+    - DoWhileStatement
+    - ForStatement
+    - ForInStatement
+    - ForOfStatement
+    - SwitchCase
+    - SwitchStatement
+    - WhileStatement
+    - WithStatement
+    - UnaryExpression[operator='delete']
+  no-multi-spaces: error
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+  no-param-reassign:
+    - error #https://github.com/airbnb/javascript#functions--reassign-params
+    - props: true #https://github.com/airbnb/javascript#functions--mutate-params
+  no-plusplus: error
+  no-shadow: error
+  no-trailing-spaces: error
+  no-unneeded-ternary: error #https://github.com/airbnb/javascript#comparison--unneeded-ternary
+  no-unused-expressions:
+   - error
+   - allowTernary: true
+  no-unreachable: error
+  no-useless-constructor: error
+  no-var: error
+  no-whitespace-before-property: error
+  object-shorthand: error
+  object-curly-spacing: #https://github.com/airbnb/javascript#whitespace--in-braces
+    - error
+    - always
+  padded-blocks:
+    - error
+    - never
+  prefer-const: error #https://github.com/airbnb/javascript#references--prefer-const
+  prefer-rest-params: error #https://github.com/airbnb/javascript#es6-rest
+  prefer-spread: error #https://github.com/airbnb/javascript#functions--spread-vs-apply
+  prefer-template: error #https://github.com/airbnb/javascript#es6-template-literals
+  prefer-arrow-callback: error #https://github.com/airbnb/javascript#arrows--use-them
+  react/prop-types: off
+  react/display-name: off
+  jsx-quotes:
+    - error
+    - prefer-double
+  quotes: #https://github.com/airbnb/javascript#strings--quotes
+    - error
+    - single
+  quote-props: #https://github.com/airbnb/javascript#objects--quoted-props
+    - error
+    - as-needed
+  semi:
+    - error
+    - always
+  semi-spacing:
+    - error
+    - before: false
+      after: false
+  space-before-blocks: error #https://github.com/airbnb/javascript#functions--signature-spacing
+  space-before-function-paren: #https://github.com/airbnb/javascript#functions--signature-spacing
+    - error
+    - never
+  space-infix-ops: error
+  space-in-parens: error
+  template-curly-spacing: error
+globals:
+  jest: true #jest
+  describe: true #mocha
+  it: true #mocha
+  beforeEach: true #mocha
+  afterEach: true #jest
+  expect: true #jest
+  document: true #browser
+  window: true #browser
+  screen: true #browser
+  beforeAll: true
+  afterAll: true
+  jasmine: true
+  Image: true
+  xprops: true #zoid
+settings:
+  react:
+    version: "16.5"
+  import/resolver:
+    node:
+      extensions:
+      - .js
+      - .jsx
+      paths:
+      - src
+      - config

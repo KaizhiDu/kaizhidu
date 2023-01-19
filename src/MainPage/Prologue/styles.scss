@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+.slide-bar {
+  position: relative;
+  color: transparent;
+  animation: fill-text-white 2s 1.6s forwards;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #35b9f1;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: slide-in-out 2s cubic-bezier(0.75, 0, 0, 1) forwards;
+  }
+}
+
+@keyframes slide-in-out {
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  50.1% {
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes fill-text-white {
+  to {
+    color: white;
+  }
+}
+
+
+.title {
+  width: 250px;
+  height: 30px;
+  font-family: Lora, serif;
+  line-height: 35px;
+  margin-bottom: 1em;
+  font-size: 2em;
+  font-weight: 600;
+
+  &::before {
+    background: #FF4081;
+  }
+}
+
+.subtitle {
+  width: 300px;
+  height: 30px;
+  font-family: Lato, sans-serif;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation-delay: 3.2s;
+  font-size: 1em;
+  &::before {
+    background: #03A9F4;
+    animation-delay: 2s;
+  }
+}
+
+.quote {
+  font-size: 1.5em;
+}
+
+.landIn {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2.8;
+  color: white;
+  font-family: Lora, serif;
+  white-space: pre;
+
+  span {
+    animation: landIn 3s ease-out both;
+  }
+}
+
+@keyframes landIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+}
+
+.profile {
+  animation-name: profileAnimation;
+  animation-duration: 10s;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.4);
+  }
+}
+
+@keyframes profileAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
