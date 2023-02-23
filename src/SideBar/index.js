@@ -1,27 +1,25 @@
 import './styles.css';
 
 import React, { Component, Fragment } from 'react';
-import MainPage from '../MainPage';
-import MyTimeline from '../MyTimeline';
+import { Link } from 'react-router-dom';
 
 class SideBar extends Component {
   state = {
-    page: 'mainPage',
     checked: false
   }
 
   render() {
-    const { page, checked } = this.state;
+    const { checked } = this.state;
 
     return (
       <Fragment>
-        <div className="wrapper">
+        <div className={`wrapper ${checked ? 'topper' : ''}`}>
           <input
             type="checkbox"
             id="menuToggler"
             className="input-toggler"
             checked={checked}
-            onClick={() => this.setState({ page: 'mainPage', checked: !checked })}
+            onClick={() => this.setState({ checked: !checked })}
           />
           <label
             htmlFor="menuToggler"
@@ -34,30 +32,39 @@ class SideBar extends Component {
           <aside className="sidebar">
             <ul className="menu">
               <li className="menu__item">
-                <div
-                  onClick={() => this.setState({ page: 'mainPage', checked: false })}
-                  className="menu__link">
-                  Home
-                </div>
+                <Link to="/">
+                  <a
+                    onClick={() => this.setState({ checked: false })}
+                    className="menu__link">
+                    Home
+                  </a>
+                </Link>
+
               </li>
-              <li className="menu__item">
-                <div
-                  onClick={() => this.setState({ page: 'myTimeline', checked: false })}
-                  className="menu__link">
-                  Blog
-                </div>
-              </li>
+              <Link to="/timeline">
+                <li className="menu__item">
+                  <a
+                    onClick={() => this.setState({ checked: false })}
+                    className="menu__link">
+                    Timeline
+                  </a>
+                </li>
+              </Link>
+              <Link to="/profile">
+                <li className="menu__item">
+                  <a
+                    onClick={() => this.setState({ checked: false })}
+                    className="menu__link">
+                    Profile
+                  </a>
+                </li>
+              </Link>
+
               <li className="menu__item"><div className="menu__link">Portfolio</div></li>
               <li className="menu__item"><div className="menu__link">About</div></li>
               <li className="menu__item"><div className="menu__link">Contact</div></li>
             </ul>
           </aside>
-
-          <main className={`content ${page}`}>
-            {page === 'mainPage' && <MainPage />}
-            {page === 'myTimeline' && <MyTimeline />}
-          </main>
-
         </div>
 
       </Fragment>

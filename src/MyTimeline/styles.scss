@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
-body {
+.myTimeline {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(16, 16, 16, 0.8),
-          rgba(16, 16, 16, 0.8)),
-  url("../background.jpeg");
+  background-color: rgb(255, 255, 255);
   background-size: cover;
 }

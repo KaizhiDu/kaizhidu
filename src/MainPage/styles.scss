@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+mainPage {
   background-image: linear-gradient(rgba(16, 16, 16, 0.8),
           rgba(16, 16, 16, 0.8)),
-  url("../background.jpeg");
+  url("../img/background.jpeg");
   background-size: cover;
 }

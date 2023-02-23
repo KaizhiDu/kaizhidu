@@ -3,6 +3,10 @@
   --toggler-size: 40px;
 }
 
+a {
+  text-decoration: none;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,11 +18,15 @@ html {
   font-size: 0.8rem;
 }
 
+.topper {
+  z-index: 99;
+}
+
 .wrapper {
   min-height: 100vh;
   min-width: 100vw;
-  background: AliceBlue;
   display: flex;
+  position: fixed;
 }
 
 .sidebar {
@@ -30,8 +38,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
   opacity: .5;
   transition: transform .6s, background-position 1s .6s;
@@ -57,6 +66,12 @@ html {
 
 .menu {
   list-style-type: none;
+}
+
+.menu__item {
+  color: inherit;
+  text-decoration: inherit;
+  text-decoration: none;
 }
 
 .menu__link {
@@ -138,26 +153,7 @@ html {
   transform: translateY(calc(var(--toggler-size) / 5 * -2)) rotate(-45deg);
 }
 
-
-
-
 @keyframes slidein {
   from {left: -200%; right:200%;}
   to {left: 0; right: 0;}
-}
-
-
-
-.mainPage {
-  background-image: linear-gradient(rgba(16, 16, 16, 0.8),
-  rgba(16, 16, 16, 0.8)),
-  url("../background.jpeg");
-  background-size: cover;
-}
-
-.myTimeline {
-  background-image: linear-gradient(rgba(16, 16, 16, 0.8),
-  rgba(16, 16, 16, 0.8)),
-  url("../background2.jpeg");
-  background-size: cover;
 }

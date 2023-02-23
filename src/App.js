@@ -1,12 +1,21 @@
 import SideBar from './SideBar';
-import React, { Component, Fragment } from 'react';
+import MainPage from './MainPage';
+import MyTimeline from './MyTimeline';
+import Profile from './Profile';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
+      <Router>
         <SideBar />
-      </Fragment>
+        <Switch>
+          <Route path="/" exact component={MainPage} />
+          <Route path="/timeline" component={MyTimeline} />
+          <Route path="/profile" component={Profile} />
+        </Switch>
+      </Router>
     );
   }
 }
