@@ -1,66 +1,26 @@
-/* eslint-disable */
-import React, { Component } from 'react';
+import React from 'react';
 import '../ProfileCard/styles.scss';
-import background2 from '../img/background2.jpeg';
-import {Grid, IconButton, List, ListItem, ListItemText, Paper} from "@mui/material";
-import MyTimeline from "../MyTimeline";
-import ProfileCard from "./ProfileCard";
-import SocialMediaInfo from "./SocialMediaInfo";
-import Charts from "./Charts";
+import { createBreakpoint } from 'react-use';
+import MobileView from './mobileView';
+import RegularView from './regularView';
 
-class Profile extends Component {
-  // componentDidMount() {
-  //   document.getElementsByTagName(
-  //     'body'
-  //     // eslint-disable-next-line max-len
-  //   )[0].style.backgroundImage = `linear-gradient(rgba(16, 16, 16, 0.8),
-  // rgba(16, 16, 16, 0.8)),url(${background2})`;
-  //   document.getElementsByTagName(
-  //     'body'
-  //     // eslint-disable-next-line max-len
-  //   )[0].style.backgroundSize = 'cover';
-  // }
+const useBreakpoint = createBreakpoint({
+  xl: 1563,
+  lg: 1200,
+  md: 900,
+  sm: 600,
+  xs: 0
+});
 
-  render() {
-    return (
-          <Grid
-              container
-              direction="row"
-              justifyContent="flex-end"
-              alignItems="center"
-              spacing={6}
-          >
-            <Grid item xs={12} md={4}>
-                <ProfileCard/>
-                <SocialMediaInfo />
-            </Grid>
+const Profile = () => {
+  const breakpoint = useBreakpoint();
+  const isMobile = breakpoint === 'sm' || breakpoint === 'xs';
 
-            <Grid item xs={12} md={8}>
-
-                <Grid item xs={12}>
-                    <Charts />
-                </Grid>
-
-
-                <Grid item xs={12}>
-                    <Charts />
-                </Grid>
-
-
-
-            </Grid>
-
-
-            {/*<Grid item xs={6}>*/}
-            {/*  <ProfileCard />*/}
-            {/*</Grid>*/}
-            {/*<Grid item xs={6}>*/}
-            {/*  <MyTimeline />*/}
-            {/*</Grid>*/}
-
-          </Grid>
-    );
+  if (isMobile) {
+    return <MobileView />;
   }
-}
+
+  return <RegularView />;
+};
 
 export default Profile;

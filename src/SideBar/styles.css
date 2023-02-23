@@ -134,7 +134,6 @@ html {
 
 .input-toggler {
   display: none;
-
 }
 
 .input-toggler:checked ~ .menu-toggler .menu-toggler__line {
