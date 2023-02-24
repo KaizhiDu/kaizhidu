@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.scss';
 import profilePhoto from '../../img/profile-photo.png';
 import { Button } from '@mui/material';
+import background3 from '../../img/background3.jpeg';
 
 function Profile({ isMobile }) {
+  useEffect(() => {
+    document.getElementsByTagName(
+      'body'
+      // eslint-disable-next-line max-len
+    // )[0].style.backgroundImage = `url(${background3})`;
+    )[0].style.backgroundImage = `linear-gradient(rgba(16, 16, 16, 0.8),rgba(16, 16, 16, 0.8)),url(${background3})`;
+    document.getElementsByTagName(
+      'body'
+      // eslint-disable-next-line max-len
+    )[0].style.backgroundSize = 'cover';
+  }, []);
+
   return (
     <div className={isMobile ? 'card-container-mobile' : 'card-container'}>
       <div className="upper-container">
