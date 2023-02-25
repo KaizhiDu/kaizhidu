@@ -53,7 +53,7 @@ const Charts = () => (
               <YAxis dataKey="name" type="category" scale="band" />
               <Tooltip />
               <Legend />
-              <Bar dataKey="熟悉度" barSize={20} fill="#413ea0" />
+              <Bar dataKey="proficiency" barSize={20} fill="#413ea0" />
             </ComposedChart>
           </Grid>
 
@@ -63,7 +63,7 @@ const Charts = () => (
                 <PolarGrid />
                 <PolarAngleAxis dataKey="subject" />
                 <PolarRadiusAxis />
-                <Radar name="Mike" dataKey="AAA" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                <Radar name="kaizhidu" dataKey="AAA" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
               </RadarChart>
             </ResponsiveContainer>
 

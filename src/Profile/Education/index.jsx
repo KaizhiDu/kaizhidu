@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -7,7 +8,9 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { Button, Card, CardContent } from '@mui/material';
-import hornblower from '../../img/hornblower.jpeg';
+import cut from '../../img/cut.png';
+import clu from '../../img/clu.jpg';
+import zqsz from '../../img/zqsz.jpg';
 
 const header = {
   backgroundColor: 'black',
@@ -20,15 +23,13 @@ const header = {
 
 export default function Education({ isMobile }) {
   return (
-    <div className="education-container">
+    <div className="experience-container">
 
-      <Card style={{
-        marginTop: '40px'
-      }}>
+      <Card>
 
         <div style={header}>
           <Typography variant="h6">
-            Education
+                        Education
           </Typography>
         </div>
 
@@ -47,7 +48,7 @@ export default function Education({ isMobile }) {
                       variant="h6"
                       style={{
                         marginRight: 40
-                      }}>2020/7 ~ now
+                      }}>2017/12 ~ 2020/05
                     </Typography>
                     <Typography
                       variant="h6"
@@ -61,23 +62,23 @@ export default function Education({ isMobile }) {
               alignItems="flex-start"
             >
               <ListItemAvatar>
-                <Avatar sx={{ width: 70, height: 70 }} alt="Remy Sharp" src={hornblower} />
+                <Avatar sx={{ width: 70, height: 70 }} alt="Remy Sharp" src={clu} />
               </ListItemAvatar>
               <ListItemText
                 sx={{ marginLeft: 2, marginTop: 2.5 }}
                 primary= {
                   <div>
-                    <b>Hornblower - Encore</b>
+                    <b>California Lutheran University</b>
                     {isMobile &&
-                            <div>
-                              <Typography
-                                variant="body"
-                                style={{
-                                  marginRight: 40
-                                }}>2020/7 ~ now
-                                <Button>KNOW MORE</Button>
-                              </Typography>
-                            </div>
+                                            <div>
+                                              <Typography
+                                                variant="body"
+                                                style={{
+                                                  marginRight: 40
+                                                }}>2017/12 ~ 2020/05
+                                                <Button>KNOW MORE</Button>
+                                              </Typography>
+                                            </div>
                     }
                   </div>
                 }
@@ -89,58 +90,168 @@ export default function Education({ isMobile }) {
                       variant="body1"
                       color="text.primary"
                     >
-                          Anchor Ticketing platform -
+                                            Master Degree
                     </Typography>
-                    {/* eslint-disable-next-line max-len */}
-                    {' Anchor services include payment processing, guest check-in, fraud protection, and support worldwide'}
+                    {isMobile ?
+                      <div>
+                        {/* eslint-disable-next-line max-len */}
+                        {'California Lutheran University is a private university in Thousand Oaks, California. '}
+                      </div> :
+
+                      <div style={{
+                        width: '600px'
+                      }}>
+                        {/* eslint-disable-next-line max-len */}
+                        {'California Lutheran University is a private university in Thousand Oaks, California. '}
+                      </div>
+                    }
                   </React.Fragment>
                 }
               />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
+
+            <ListItem
+              secondaryAction={
+                isMobile ? <div/> :
+                  <div>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>2012/09 ~ 2016/06
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>
+                      <Button>KNOW MORE</Button>
+                    </Typography>
+                  </div>
+              }
+              alignItems="flex-start"
+            >
               <ListItemAvatar>
-                <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+                <Avatar sx={{ width: 70, height: 70 }} alt="Remy Sharp" src={cut} />
               </ListItemAvatar>
               <ListItemText
-                primary="Summer BBQ"
+                sx={{ marginLeft: 2, marginTop: 2.5 }}
+                primary= {
+                  <div>
+                    <b>Changchun University of Technology</b>
+                    {isMobile &&
+                                            <div>
+                                              <Typography
+                                                variant="body"
+                                                style={{
+                                                  marginRight: 40
+                                                }}>2012/09 ~ 2016/06
+                                                <Button>KNOW MORE</Button>
+                                              </Typography>
+                                            </div>
+                    }
+                  </div>
+                }
                 secondary={
                   <React.Fragment>
                     <Typography
                       sx={{ display: 'inline' }}
                       component="span"
-                      variant="body2"
+                      variant="body1"
                       color="text.primary"
                     >
-                          to Scott, Alex, Jennifer
+                        Bachelor Degree
                     </Typography>
-                    {' — Wish I could come, but I\'m out of town this…'}
+
+                    {isMobile ?
+                      <div >
+                        {/* eslint-disable-next-line max-len */}
+                        {'Changchun University of Technology is a comprehensive university located in Changchun City, Jilin Province, China'}
+
+                      </div> :
+                      <div style={{
+                        width: '600px'
+                      }}>
+                        {/* eslint-disable-next-line max-len */}
+                        {'Changchun University of Technology is a comprehensive university located in Changchun City, Jilin Province, China'}
+                      </div>
+                    }
                   </React.Fragment>
                 }
               />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
+
+            <ListItem
+              secondaryAction={
+                isMobile ? <div/> :
+                  <div>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>2009/09 ~ 2012/05
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>
+                      <Button>KNOW MORE</Button>
+                    </Typography>
+                  </div>
+              }
+              alignItems="flex-start"
+            >
               <ListItemAvatar>
-                <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+                <Avatar sx={{ width: 70, height: 70 }} alt="Remy Sharp" src={zqsz} />
               </ListItemAvatar>
               <ListItemText
-                primary="Oui Oui"
+                sx={{ marginLeft: 2, marginTop: 2.5 }}
+                primary= {
+                  <div>
+                    <b>Zhangqiu No. 4 High School</b>
+                    {isMobile &&
+                                            <div>
+                                              <Typography
+                                                variant="body"
+                                                style={{
+                                                  marginRight: 40
+                                                }}>2009/09 ~ 2012/05
+                                                <Button>KNOW MORE</Button>
+                                              </Typography>
+                                            </div>
+                    }
+                  </div>
+                }
                 secondary={
                   <React.Fragment>
                     <Typography
                       sx={{ display: 'inline' }}
                       component="span"
-                      variant="body2"
+                      variant="body1"
                       color="text.primary"
                     >
-                          Sandra Adams
+                                            High School
                     </Typography>
-                    {' — Do you have Paris recommendations? Have you ever…'}
+                    {isMobile ?
+                      <div>
+                        {/* eslint-disable-next-line max-len */}
+                        {'Zhangqiu No. 4 High School is a provincial key high school located in Jinan City, Shandong Province, China'}
+                      </div> :
+                      <div style={{
+                        width: '600px'
+                      }}>
+                        {/* eslint-disable-next-line max-len */}
+                        {'Zhangqiu No. 4 High School is a provincial key high school located in Jinan City, Shandong Province, China'}
+                      </div>
+                    }
                   </React.Fragment>
                 }
               />
             </ListItem>
+
           </List>
         </CardContent>
 

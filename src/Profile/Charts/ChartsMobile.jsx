@@ -34,7 +34,7 @@ const Charts = () => (
         <YAxis dataKey="name" type="category" scale="band" />
         <Tooltip />
         <Legend />
-        <Bar dataKey="熟悉度" barSize={20} fill="#413ea0" />
+        <Bar dataKey="proficiency" barSize={20} fill="#413ea0" />
       </ComposedChart>
 
     </div>

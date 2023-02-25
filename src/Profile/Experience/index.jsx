@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -8,6 +9,8 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { Button, Card, CardContent } from '@mui/material';
 import hornblower from '../../img/hornblower.jpeg';
+import superstar from '../../img/superstar.jpg';
+import tapSeries from '../../img/tap-series.png';
 
 const header = {
   backgroundColor: 'black',
@@ -20,7 +23,11 @@ const header = {
 
 export default function Experience({ isMobile }) {
   return (
-    <div className="experience-container">
+    <div
+      style={{
+        marginBottom: 40
+      }}
+      className="experience-container">
 
       <Card>
 
@@ -44,8 +51,8 @@ export default function Experience({ isMobile }) {
                     <Typography
                       variant="h6"
                       style={{
-                        marginRight: 40
-                      }}>2020/7 ~ now
+                        marginRight: 70
+                      }}>2020/07 ~ now
                     </Typography>
                     <Typography
                       variant="h6"
@@ -72,7 +79,7 @@ export default function Experience({ isMobile }) {
                             variant="body"
                             style={{
                               marginRight: 40
-                            }}>2020/7 ~ now
+                            }}>2020/07 ~ now
                             <Button>KNOW MORE</Button>
                           </Typography>
                         </div>
@@ -87,58 +94,168 @@ export default function Experience({ isMobile }) {
                       variant="body1"
                       color="text.primary"
                     >
-                      Anchor Ticketing platform -
+                      Anchor Ticketing platform
                     </Typography>
-                    {/* eslint-disable-next-line max-len */}
-                    {' Anchor services include payment processing, guest check-in, fraud protection, and support worldwide'}
+                    {isMobile ?
+                      <div>
+                        {/* eslint-disable-next-line max-len */}
+                        {' Anchor services include payment processing, guest check-in, fraud protection, and support worldwide'}
+                      </div> :
+
+                      <div style={{
+                        width: '600px'
+                      }}>
+                        {/* eslint-disable-next-line max-len */}
+                        {' Anchor services include payment processing, guest check-in, fraud protection, and support worldwide'}
+                      </div>
+                    }
                   </React.Fragment>
                 }
               />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
+
+            <ListItem
+              secondaryAction={
+                isMobile ? <div/> :
+                  <div>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>2019/05 ~ 2019/08
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>
+                      <Button>KNOW MORE</Button>
+                    </Typography>
+                  </div>
+              }
+              alignItems="flex-start"
+            >
               <ListItemAvatar>
-                <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+                <Avatar sx={{ width: 70, height: 70 }} alt="Remy Sharp" src={tapSeries} />
               </ListItemAvatar>
               <ListItemText
-                primary="Summer BBQ"
+                sx={{ marginLeft: 2, marginTop: 2.5 }}
+                primary= {
+                  <div>
+                    <b>Tap Series</b>
+                    {isMobile &&
+                                  <div>
+                                    <Typography
+                                      variant="body"
+                                      style={{
+                                        marginRight: 40
+                                      }}>2019/05 ~ 2019/08
+                                      <Button>KNOW MORE</Button>
+                                    </Typography>
+                                  </div>
+                    }
+                  </div>
+                }
                 secondary={
                   <React.Fragment>
                     <Typography
                       sx={{ display: 'inline' }}
                       component="span"
-                      variant="body2"
+                      variant="body1"
                       color="text.primary"
                     >
-                                            to Scott, Alex, Jennifer
+                                  TAP Series Food Safety Training System
                     </Typography>
-                    {' — Wish I could come, but I\'m out of town this…'}
+
+                    {isMobile ?
+                      <div >
+                        {/* eslint-disable-next-line max-len */}
+                        {' With over a million trained individuals around the world, the TAP Series leads the industry in online classes and Cloud solutions'}
+
+                      </div> :
+                      <div style={{
+                        width: '600px'
+                      }}>
+                        {/* eslint-disable-next-line max-len */}
+                        {' With over a million trained individuals around the world, the TAP Series leads the industry in online classes and Cloud solutions'}
+                      </div>
+                    }
                   </React.Fragment>
                 }
               />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
+
+            <ListItem
+              secondaryAction={
+                isMobile ? <div/> :
+                  <div>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>2018/05 ~ 2018/12
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      style={{
+                        marginRight: 40
+                      }}>
+                      <Button>KNOW MORE</Button>
+                    </Typography>
+                  </div>
+              }
+              alignItems="flex-start"
+            >
               <ListItemAvatar>
-                <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+                <Avatar sx={{ width: 70, height: 70 }} alt="Remy Sharp" src={superstar} />
               </ListItemAvatar>
               <ListItemText
-                primary="Oui Oui"
+                sx={{ marginLeft: 2, marginTop: 2.5 }}
+                primary= {
+                  <div>
+                    <b>Chao Xing</b>
+                    {isMobile &&
+                                  <div>
+                                    <Typography
+                                      variant="body"
+                                      style={{
+                                        marginRight: 40
+                                      }}>2018/05 ~ 2018/12
+                                      <Button>KNOW MORE</Button>
+                                    </Typography>
+                                  </div>
+                    }
+                  </div>
+                }
                 secondary={
                   <React.Fragment>
                     <Typography
                       sx={{ display: 'inline' }}
                       component="span"
-                      variant="body2"
+                      variant="body1"
                       color="text.primary"
                     >
-                                            Sandra Adams
+                                  Chao Xing University Management System
                     </Typography>
-                    {' — Do you have Paris recommendations? Have you ever…'}
+                    {isMobile ?
+                      <div>
+                        {/* eslint-disable-next-line max-len */}
+                        {' ChaoXing University System provided management systems for more than 20 universities to help universities manage better'}
+                      </div> :
+                      <div style={{
+                        width: '600px'
+                      }}>
+                        {/* eslint-disable-next-line max-len */}
+                        {' ChaoXing University System provided management systems for more than 20 universities to help universities manage better'}
+                      </div>
+                    }
                   </React.Fragment>
                 }
               />
             </ListItem>
+
           </List>
         </CardContent>
 
