@@ -57,8 +57,37 @@
   }
 }
 
+.title-mobile {
+  width: 150px;
+  height: 30px;
+  font-family: Lora, serif;
+  line-height: 35px;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+
+  &::before {
+    background: #FF4081;
+  }
+}
+
 .subtitle {
   width: 300px;
+  height: 30px;
+  font-family: Lato, sans-serif;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation-delay: 3.2s;
+  font-size: 1em;
+  &::before {
+    background: #03A9F4;
+    animation-delay: 2s;
+  }
+}
+
+.subtitle-mobile {
+  width: 200px;
   height: 30px;
   font-family: Lato, sans-serif;
   line-height: 30px;

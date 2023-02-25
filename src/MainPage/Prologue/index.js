@@ -16,7 +16,6 @@ const MainPage = () => {
   });
   const breakpoint = useBreakpoint();
   const isMobile = breakpoint === 'sm' || breakpoint === 'xs';
-  console.log('isMobile', isMobile);
   return (
     <Fragment>
       <table id="simple-board">
@@ -24,8 +23,8 @@ const MainPage = () => {
           <tr id="row0">
             <td id="cell0-0">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <p className="slide-bar title">I'm Kaizhi Du.</p>
-              <p className="slide-bar subtitle">A full stack engineer</p>
+              <p className={isMobile ? 'slide-bar title-mobile' : 'slide-bar title' }>I'm Kaizhi Du.</p>
+              <p className={isMobile ? 'slide-bar subtitle-mobile' : 'slide-bar subtitle'}>A full stack engineer</p>
             </td>
             <td id="cell0-1">
               <img className="prologue-profile" src={profile} width={100} height={100}/>
