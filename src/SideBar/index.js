@@ -60,9 +60,7 @@ class SideBar extends Component {
                 </li>
               </Link>
 
-              <li className="menu__item"><div className="menu__link">Portfolio</div></li>
-              <li className="menu__item"><div className="menu__link">About</div></li>
-              <li className="menu__item"><div className="menu__link">Contact</div></li>
+              <li className="menu__item"><div className="menu__link">锄大地</div></li>
             </ul>
           </aside>
         </div>
