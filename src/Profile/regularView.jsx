@@ -9,6 +9,18 @@ import Education from './Education';
 
 class regularView extends Component {
   render() {
+    const { breakpoint } = this.props;
+    // eslint-disable-next-line no-unused-vars
+    let chartMarginTop;
+
+    if (breakpoint === 'lg') {
+      chartMarginTop = 800;
+    }
+
+    if (breakpoint === 'xl') {
+      chartMarginTop = 0;
+    }
+
     return (
       <Grid
         container
@@ -18,14 +30,15 @@ class regularView extends Component {
         spacing={6}
       >
         <Grid item xs={12} md={4}>
-          <ProfileCard />
+          <ProfileCard breakpoint={breakpoint} />
           <SocialMediaInfo />
         </Grid>
 
         <Grid item xs={12} md={8}>
           <Grid item xs={12}>
             <div style={{
-              marginTop: 600
+              marginTop: chartMarginTop,
+              width: 1000
             }}>
               <Charts />
             </div>

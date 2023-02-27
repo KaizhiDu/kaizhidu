@@ -4,7 +4,7 @@ import profilePhoto from '../../img/profile-photo.png';
 import { Button } from '@mui/material';
 import background3 from '../../img/background3.jpeg';
 
-function Profile({ isMobile }) {
+function Profile({ isMobile, breakpoint }) {
   useEffect(() => {
     document.getElementsByTagName(
       'body'
@@ -18,7 +18,11 @@ function Profile({ isMobile }) {
   }, []);
 
   return (
-    <div className={isMobile ? 'card-container-mobile' : 'card-container'}>
+    <div className={isMobile ? 'card-container-mobile' : 'card-container'}
+      style={{
+        marginTop: breakpoint === 'xl' ? -500 : 120
+      }}
+    >
       <div className="upper-container">
         <div className={isMobile ? 'image-container-mobile' : 'image-container'}>
           <img className="profile-image" src={profilePhoto} alt="" height="100px" width="100px"/>
