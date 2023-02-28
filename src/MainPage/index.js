@@ -1,10 +1,16 @@
 import './styles.scss';
-import Prologue from './Prologue';
-import React, { Component } from 'react';
+import ReactTyped01 from './ReactTyped01';
+import React, { useEffect, useState } from 'react';
 import background from '../img/background.jpeg';
+import Banner01 from './Banner01transparent';
 
-class App extends Component {
-  componentDidMount() {
+const MainPage = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined
+  });
+
+  useEffect(() => {
     document.getElementsByTagName(
       'body'
       // eslint-disable-next-line max-len
@@ -14,15 +20,31 @@ class App extends Component {
       'body'
       // eslint-disable-next-line max-len
     )[0].style.backgroundSize = 'cover';
-  }
 
-  render() {
-    return (
-      <div>
-        <Prologue />
-      </div>
-    );
-  }
-}
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
 
-export default App;
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+  }, []);
+
+  return (
+    <div
+      style={{
+        marginTop: windowSize.height / 2 - 100
+      }}
+    >
+      <Banner01 title="Kaizhi Du" subtitle={<ReactTyped01 />} />
+    </div>
+  );
+};
+
+export default MainPage;
