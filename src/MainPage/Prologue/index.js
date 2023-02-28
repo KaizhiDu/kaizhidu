@@ -1,6 +1,6 @@
 import './styles.scss';
 import profile from '../../profile.jpeg';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { createBreakpoint } from 'react-use';
 
 const MainPage = () => {
@@ -8,7 +8,7 @@ const MainPage = () => {
   const textArray = text.split('');
 
   const useBreakpoint = createBreakpoint({
-    xl: 1563,
+    xl: 2000,
     lg: 1200,
     md: 900,
     sm: 600,
@@ -17,7 +17,9 @@ const MainPage = () => {
   const breakpoint = useBreakpoint();
   const isMobile = breakpoint === 'sm' || breakpoint === 'xs';
   return (
-    <Fragment>
+    <div style={{
+      height: '100vh'
+    }}>
       <table id="simple-board">
         <tbody>
           <tr id="row0">
@@ -38,7 +40,7 @@ const MainPage = () => {
       }}>
         {letter}
       </span>)}</p>
-    </Fragment>
+    </div>
   );
 };
 
