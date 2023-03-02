@@ -1,7 +1,6 @@
 import './styles.scss';
 import ReactTyped01 from './ReactTyped01';
 import React, { useEffect, useState } from 'react';
-import background from '../img/background.jpeg';
 import Banner01 from './Banner01transparent';
 
 const MainPage = () => {
@@ -9,6 +8,8 @@ const MainPage = () => {
     width: undefined,
     height: undefined
   });
+
+  const background = 'https://public-bucket-kaizhidu.s3.us-west-2.amazonaws.com/background.jpeg';
 
   useEffect(() => {
     document.getElementsByTagName(

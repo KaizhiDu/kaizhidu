@@ -1,11 +1,12 @@
 /* eslint-disable max-lines */
 import React, { useEffect } from 'react';
 import './styles.scss';
-import background2 from '../img/background2.jpeg';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 // import WorkIcon from '@mui/icons-material/Work';
 // import SchoolIcon from '@mui/icons-material/School';
 // import StarIcon from '@mui/icons-material/Star';
+
+const background = 'https://public-bucket-kaizhidu.s3.us-west-2.amazonaws.com/background2.jpeg';
 
 const MyTimeline = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const MyTimeline = () => {
       'body'
       // eslint-disable-next-line max-len
     )[0].style.backgroundImage = `linear-gradient(rgba(16, 16, 16, 0.8),
-  rgba(16, 16, 16, 0.8)),url(${background2})`;
+  rgba(16, 16, 16, 0.8)),url(${background})`;
     document.getElementsByTagName(
       'body'
       // eslint-disable-next-line max-len
