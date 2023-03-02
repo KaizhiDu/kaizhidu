@@ -12,7 +12,8 @@ const ReactTyped01 = () => (
         'Full Stack Developer',
         'Project Manager',
         'Child Programming Teacher',
-        'Adult Programming Teacher'
+        'Adult Programming Teacher',
+        'Stock Investor'
       ]}
       typeSpeed={50}
       backSpeed={35}
