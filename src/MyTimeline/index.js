@@ -18,7 +18,7 @@ const MyTimeline = () => {
     document.getElementsByTagName(
       'body'
       // eslint-disable-next-line max-len
-    )[0].style.backgroundSize = 'cover';
+    )[0].style.backgroundSize = 'contain';
   }, []);
 
   return (

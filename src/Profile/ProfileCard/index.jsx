@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './styles.scss';
 import profilePhoto from '../../img/profile-photo.png';
 import { Button } from '@mui/material';
-const background = 'https://public-bucket-kaizhidu.s3.us-west-2.amazonaws.com/background2.jpeg';
+const background = 'https://public-bucket-kaizhidu.s3.us-west-2.amazonaws.com/background3.jpeg';
 
 function Profile({ isMobile }) {
   useEffect(() => {
@@ -14,7 +14,7 @@ function Profile({ isMobile }) {
     document.getElementsByTagName(
       'body'
       // eslint-disable-next-line max-len
-    )[0].style.backgroundSize = 'cover';
+    )[0].style.backgroundSize = 'contain';
   }, []);
 
   return (
