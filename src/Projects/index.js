@@ -13,12 +13,25 @@ import profile from '../img/project/profile.jpg';
 import candyStore from '../img/project/candyStore.png';
 import duiCloud from '../img/project/dui-cloud.png';
 import { Button } from '@mui/material';
+import { createBreakpoint } from 'react-use';
+
+const useBreakpoint = createBreakpoint({
+  xl: 2000,
+  lg: 1200,
+  md: 900,
+  sm: 600,
+  xs: 0
+});
 
 export default function TitlebarBelowImageList() {
+  const breakpoint = useBreakpoint();
+
+  const isMobile = breakpoint === 'sm' || breakpoint === 'xs';
+
   const [show, setShow] = useState(null);
 
   return (
-    <ImageList cols={3} sx={{ width: 1300, marginTop: 10 }}>
+    <ImageList cols={isMobile ? 1 : 3} sx={{ width: isMobile ? 415 : 1300, marginTop: 10 }}>
       {itemData.map((item, idx) => {
         const { img, title, author, gitHubUrl, description, demo } = item || {};
         const isShow = idx === show;
