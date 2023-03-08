@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+.project-img-section {
+  position: relative;
+}
+
+.project-img-section:hover img {
+  transform: translateY(-20px);
+  transition: all .5s;
+  opacity: 0.2;
+}
+
+.project-img-section-wording {
+  position:absolute;
+  color: white;
+  top: 20%;
+  left: 20%;
+  opacity: 0;
+}
+
+.project-img-section-wording-show {
+  position:absolute;
+  color: white;
+  top: 20%;
+  left: 20%;
+  opacity: 1;
+}
+
+.project-img-section-button {
+  position:absolute;
+  top: 60%;
+  left: 40%;
+  opacity: 0;
+}
+
+.project-img-section-button-show {
+  position:absolute;
+  top: 60%;
+  left: 35%;
+  opacity: 1;
+}

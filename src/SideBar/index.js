@@ -59,7 +59,15 @@ class SideBar extends Component {
                   </a>
                 </li>
               </Link>
-
+              <Link to="/projects">
+                <li className="menu__item">
+                  <a
+                    onClick={() => this.setState({ checked: false })}
+                    className="menu__link">
+                    Projects
+                  </a>
+                </li>
+              </Link>
               <Link to="/game">
                 <li className="menu__item">
                   <a
