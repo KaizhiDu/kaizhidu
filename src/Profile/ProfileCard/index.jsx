@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './styles.scss';
+import { useHistory } from 'react-router-dom';
 import profilePhoto from '../../img/profile-photo.png';
 import { Button } from '@mui/material';
 const background = 'https://public-bucket-kaizhidu.s3.us-west-2.amazonaws.com/background3.jpeg';
@@ -16,6 +17,8 @@ function Profile({ isMobile }) {
       // eslint-disable-next-line max-len
     )[0].style.backgroundSize = 'contain';
   }, []);
+
+  const history = useHistory();
 
   return (
     <div className={isMobile ? 'card-container-mobile' : 'card-container'}
@@ -34,10 +37,14 @@ function Profile({ isMobile }) {
         <p className="profile-introduction">For me, most of the
                     happiness comes from solving problems, especially solving problems independently,
                     not from how big the CASE is and how much bonus it has.</p>
-        <Button variant="contained">
+        <Button
+          onClick={() => history.push('/projects')}
+          variant="contained">
                     PROJECT
         </Button>
-        <Button style={{ marginLeft: 10 }} variant="contained">
+        <Button
+          onClick={() => history.push('/timeline')}
+          style={{ marginLeft: 10 }} variant="contained">
                     KNOW ME MORE
         </Button>
 
