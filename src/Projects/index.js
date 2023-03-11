@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -14,6 +14,7 @@ import candyStore from '../img/project/candyStore.png';
 import duiCloud from '../img/project/dui-cloud.png';
 import { Button } from '@mui/material';
 import { createBreakpoint } from 'react-use';
+const background = 'https://public-bucket-kaizhidu.s3.us-west-2.amazonaws.com/background4.jpeg';
 
 const useBreakpoint = createBreakpoint({
   xl: 2000,
@@ -24,6 +25,18 @@ const useBreakpoint = createBreakpoint({
 });
 
 export default function TitlebarBelowImageList() {
+  useEffect(() => {
+    document.getElementsByTagName(
+      'body'
+      // eslint-disable-next-line max-len
+      // )[0].style.backgroundImage = `url(${background3})`;
+    )[0].style.backgroundImage = `linear-gradient(rgba(16, 16, 16, 0.8),rgba(16, 16, 16, 0.8)),url(${background})`;
+    document.getElementsByTagName(
+      'body'
+      // eslint-disable-next-line max-len
+    )[0].style.backgroundSize = 'cover';
+  }, []);
+
   const breakpoint = useBreakpoint();
 
   const isMobile = breakpoint === 'sm' || breakpoint === 'xs';
@@ -61,7 +74,7 @@ export default function TitlebarBelowImageList() {
               <div className={isShow ? 'project-img-section-button-show' : 'project-img-section-button' }>
                 <Button
                   onClick={() => {
-                    window.open(demo || gitHubUrl, 'blank');
+                    window.open(demo || gitHubUrl, demo || gitHubUrl);
                   }}
                   variant="contained"
                 >

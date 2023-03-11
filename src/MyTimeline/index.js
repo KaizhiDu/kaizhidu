@@ -73,7 +73,7 @@ const MyTimeline = () => {
                 marginTop: 5
               }}
               onClick={() => {
-                window.open('https://www.getanchor.io/', 'blank');
+                window.open('https://www.getanchor.io/', 'getanchor');
               }}
             />
           </p>
@@ -90,7 +90,7 @@ const MyTimeline = () => {
                 marginTop: 5
               }}
               onClick={() => {
-                window.open('https://www.takewalks.com/', 'blank');
+                window.open('https://www.takewalks.com/', 'takewalks');
               }}
             />
           </p>
@@ -109,7 +109,7 @@ const MyTimeline = () => {
                 marginTop: 5
               }}
               onClick={() => {
-                window.open('https://nightlyspirits.com/', 'blank');
+                window.open('https://nightlyspirits.com/', 'nightlyspirits');
               }}
             />
           </p>
@@ -128,7 +128,7 @@ const MyTimeline = () => {
                 marginTop: 5
               }}
               onClick={() => {
-                window.open('https://www.torontozoo.com/', 'blank');
+                window.open('https://www.torontozoo.com/', 'torontozoo');
               }}
             />
           </p>
@@ -146,7 +146,7 @@ const MyTimeline = () => {
                 marginTop: 5
               }}
               onClick={() => {
-                window.open('https://www.maverickhelicopter.com/', 'blank');
+                window.open('https://www.maverickhelicopter.com/', 'maverickhelicopter');
               }}
             />
           </p>

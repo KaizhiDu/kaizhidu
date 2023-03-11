@@ -55,7 +55,9 @@ export default function Education({ isMobile }) {
                       style={{
                         marginRight: 40
                       }}>
-                      <Button>KNOW MORE</Button>
+                      <Button onClick={() => {
+                        window.open('https://www.callutheran.edu/', 'callutheran');
+                      }}>KNOW MORE</Button>
                     </Typography>
                   </div>
               }
@@ -76,7 +78,9 @@ export default function Education({ isMobile }) {
                                                 style={{
                                                   marginRight: 40
                                                 }}>2017/12 ~ 2020/05
-                                                <Button>KNOW MORE</Button>
+                                                <Button onClick={() => {
+                                                  window.open('https://www.callutheran.edu/', 'callutheran');
+                                                }}>KNOW MORE</Button>
                                               </Typography>
                                             </div>
                     }
@@ -126,7 +130,9 @@ export default function Education({ isMobile }) {
                       style={{
                         marginRight: 40
                       }}>
-                      <Button>KNOW MORE</Button>
+                      <Button onClick={() => {
+                        window.open('https://www.ccut.edu.cn/', 'ccut');
+                      }}>KNOW MORE</Button>
                     </Typography>
                   </div>
               }
@@ -147,7 +153,9 @@ export default function Education({ isMobile }) {
                                                 style={{
                                                   marginRight: 40
                                                 }}>2012/09 ~ 2016/06
-                                                <Button>KNOW MORE</Button>
+                                                <Button onClick={() => {
+                                                  window.open('https://www.ccut.edu.cn/', 'ccut');
+                                                }}>KNOW MORE</Button>
                                               </Typography>
                                             </div>
                     }
@@ -198,7 +206,9 @@ export default function Education({ isMobile }) {
                       style={{
                         marginRight: 40
                       }}>
-                      <Button>KNOW MORE</Button>
+                      <Button onClick={() => {
+                        window.open('http://www.xiaozhang.com.cn/xuexiao/school_info.aspx?id=676', 'zqsz');
+                      }}>KNOW MORE</Button>
                     </Typography>
                   </div>
               }
@@ -219,7 +229,10 @@ export default function Education({ isMobile }) {
                                                 style={{
                                                   marginRight: 40
                                                 }}>2009/09 ~ 2012/05
-                                                <Button>KNOW MORE</Button>
+                                                <Button onClick={() => {
+                                                  window.open('http://www.xiaozhang.com.cn/xuexiao/' +
+                                                      'school_info.aspx?id=676', 'zqsz');
+                                                }}>KNOW MORE</Button>
                                               </Typography>
                                             </div>
                     }

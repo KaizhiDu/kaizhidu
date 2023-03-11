@@ -59,7 +59,9 @@ export default function Experience({ isMobile }) {
                       style={{
                         marginRight: 40
                       }}>
-                      <Button>KNOW MORE</Button>
+                      <Button onClick={() => {
+                        window.open('https://www.getanchor.io/', 'getanchor');
+                      }}>KNOW MORE</Button>
                     </Typography>
                   </div>
               }
@@ -80,7 +82,9 @@ export default function Experience({ isMobile }) {
                             style={{
                               marginRight: 40
                             }}>2020/07 ~ now
-                            <Button>KNOW MORE</Button>
+                            <Button onClick={() => {
+                              window.open('https://www.getanchor.io/', 'getanchor');
+                            }}>KNOW MORE</Button>
                           </Typography>
                         </div>
                     }
@@ -130,7 +134,9 @@ export default function Experience({ isMobile }) {
                       style={{
                         marginRight: 40
                       }}>
-                      <Button>KNOW MORE</Button>
+                      <Button onClick={() => {
+                        window.open('https://tapseries.io/', 'tapseries');
+                      }}>KNOW MORE</Button>
                     </Typography>
                   </div>
               }
@@ -151,7 +157,9 @@ export default function Experience({ isMobile }) {
                                       style={{
                                         marginRight: 40
                                       }}>2019/05 ~ 2019/08
-                                      <Button>KNOW MORE</Button>
+                                      <Button onClick={() => {
+                                        window.open('https://tapseries.io/', 'tapseries');
+                                      }}>KNOW MORE</Button>
                                     </Typography>
                                   </div>
                     }
@@ -202,7 +210,9 @@ export default function Experience({ isMobile }) {
                       style={{
                         marginRight: 40
                       }}>
-                      <Button>KNOW MORE</Button>
+                      <Button onClick={() => {
+                        window.open('https://www.chaoxing.com/', 'chaoxing');
+                      }}>KNOW MORE</Button>
                     </Typography>
                   </div>
               }
@@ -223,7 +233,9 @@ export default function Experience({ isMobile }) {
                                       style={{
                                         marginRight: 40
                                       }}>2018/05 ~ 2018/12
-                                      <Button>KNOW MORE</Button>
+                                      <Button onClick={() => {
+                                        window.open('https://www.chaoxing.com/', 'chaoxing');
+                                      }}>KNOW MORE</Button>
                                     </Typography>
                                   </div>
                     }
